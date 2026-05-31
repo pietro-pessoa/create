@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Create</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Blockly Library -->
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <!-- Blockly JavaScript Generator -->
+    <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Main Menu -->
+        <div id="menu-view" class="view active">
+            <select id="lang-selector" class="lang-selector">
+                <option value="en">English</option>
+                <option value="pt">Português</option>
+                <option value="es">Español</option>
+                <option value="ja">日本語</option>
+            </select>
+            <header class="menu-header">
+                <h1 id="app-title"><span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span></h1>
+                <p id="app-subtitle">Your offline block programming environment</p>
+            </header>
+            
+            <div class="menu-actions">
+                <button id="new-project-btn" class="primary-btn green">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span id="btn-new-project">New Project</span>
+                </button>
+            </div>
+
+            <div class="projects-container">
+                <h2 id="title-my-projects">My Projects</h2>
+                <div id="projects-list" class="projects-grid">
+                    <!-- Projects will be generated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Editor View -->
+        <div id="editor-view" class="view">
+            <header class="editor-header">
+                <div class="header-left">
+                    <button id="back-btn" class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    </button>
+                    <input type="text" id="project-title" value="Untitled Project" placeholder="Project Title" />
+                </div>
+                <div class="header-center">
+                    <button id="play-btn" class="play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> <span id="btn-play">Play</span></button>
+                    <button id="stop-btn" class="stop-btn" style="display: none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg> <span id="btn-stop">Stop</span></button>
+                </div>
+                <div class="header-right">
+                    <button id="draw-btn" class="primary-btn yellow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.58 7.58"></path></svg>
+                        <span id="btn-paint">Paint</span>
+                    </button>
+                    <button id="save-btn" class="primary-btn blue"><span id="btn-save">Save</span></button>
+                </div>
+            </header>
+            
+            <div class="editor-content">
+                <!-- Left Panel: Stage + Sprites -->
+                <div class="left-panel">
+                    <div class="stage-container">
+                        <canvas id="stage-canvas" width="480" height="360"></canvas>
+                        <div id="controls-overlay" class="controls-overlay">
+                            <div id="joystick-overlay" class="joystick-container">
+                                <div class="joystick-base"><div class="joystick-stick"></div></div>
+                            </div>
+                            <div id="jump-btn-overlay" class="jump-btn-container">
+                                <button id="jump-btn" class="jump-btn-on-screen">JUMP</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sprites Manager -->
+                    <div class="sprites-panel">
+                        <!-- Properties Panel -->
+                        <div class="properties-panel" id="properties-panel">
+                            <div class="prop-row">
+                                <div class="prop-group" style="flex: 2;">
+                                    <label>Sprite</label>
+                                    <input type="text" id="prop-name" value="">
+                                </div>
+                                <div class="prop-group">
+                                    <label>X</label>
+                                    <input type="number" id="prop-x" value="0">
+                                </div>
+                                <div class="prop-group">
+                                    <label>Y</label>
+                                    <input type="number" id="prop-y" value="0">
+                                </div>
+                            </div>
+                            <div class="prop-row">
+                                <div class="prop-group">
+                                    <label>Size</label>
+                                    <input type="number" id="prop-size" value="100">
+                                </div>
+                                <div class="prop-group">
+                                    <label>Direction</label>
+                                    <input type="number" id="prop-dir" value="90">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sprites-header">
+                            <h3 id="sprites-title">Objects</h3>
+                            <div class="sprites-actions">
+                                <button id="add-sprite-draw-btn" class="icon-btn" title="Draw New Object">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+                                </button>
+                                <label for="upload-sprite-input" class="icon-btn" title="Upload Image" style="cursor: pointer; margin: 0; display: flex;">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                    <input type="file" id="upload-sprite-input" accept="image/*" style="display: none;">
+                                </label>
+                            </div>
+                        </div>
+                        <div id="sprites-list" class="sprites-list">
+                            <!-- Sprite cards will be generated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockly Workspace Container -->
+                <div id="blocklyDiv" class="workspace"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blockly Toolbox XML Definition -->
+    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+        <category name="Events" colour="65">
+            <block type="event_when_play_clicked"></block>
+            <block type="event_on_collision"></block>
+        </category>
+        <category name="Motion" colour="230">
+            <block type="motion_move_steps">
+                <value name="STEPS">
+                    <shadow type="math_number">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="motion_enable_joystick"></block>
+        </category>
+        <category name="Game" colour="120">
+            <block type="game_set_life">
+                <value name="LIFE">
+                    <shadow type="math_number">
+                        <field name="NUM">100</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="game_change_life">
+                <value name="LIFE">
+                    <shadow type="math_number">
+                        <field name="NUM">-10</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="game_set_barrier"></block>
+        </category>
+        <category name="Looks" colour="290">
+            <block type="looks_switch_scenario"></block>
+        </category>
+        <category name="Logic" colour="%{BKY_LOGIC_HUE}">
+            <block type="controls_if"></block>
+            <block type="logic_compare"></block>
+            <block type="logic_operation"></block>
+            <block type="logic_negate"></block>
+            <block type="logic_boolean"></block>
+        </category>
+        <category name="Loops" colour="%{BKY_LOOPS_HUE}">
+            <block type="controls_repeat_ext">
+                <value name="TIMES">
+                    <shadow type="math_number">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="controls_whileUntil"></block>
+            <block type="controls_for">
+                <value name="FROM">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="TO">
+                    <shadow type="math_number">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+                <value name="BY">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+            </block>
+        </category>
+        <category name="Math" colour="%{BKY_MATH_HUE}">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+            <block type="math_arithmetic"></block>
+            <block type="math_single"></block>
+        </category>
+        <category name="Text" colour="%{BKY_TEXTS_HUE}">
+            <block type="text"></block>
+            <block type="text_print"></block>
+        </category>
+        <category name="Variables" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>
+    </xml>
+
+    <!-- Paint Modal -->
+    <div id="paint-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="paint-title">Draw Object</h2>
+                <button id="close-paint-btn" class="icon-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+            </div>
+            <div class="paint-toolbar">
+                <div class="paint-tools-group">
+                    <button class="icon-btn paint-tool-btn active" id="tool-brush" title="Brush">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                    </button>
+                    <button class="icon-btn paint-tool-btn" id="tool-eraser" title="Eraser">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 20H7L3 16C2.5 15.5 2.5 14.5 3 14L13 4C13.5 3.5 14.5 3.5 15 4L20 9C20.5 9.5 20.5 10.5 20 11L11 20H20V20Z"></path><line x1="18" y1="11" x2="8" y2="21"></line></svg>
+                    </button>
+                    <button class="icon-btn paint-tool-btn" id="tool-bucket" title="Fill Bucket">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19.23 6L14 11.23a2 2 0 0 1-2.83 0L3 3.05"></path><path d="M16 13.23L11.77 17.5a2 2 0 0 1-2.83 0L3 11.5"></path><path d="M16.14 3.86a2 2 0 0 1 2.83 0l1.17 1.17a2 2 0 0 1 0 2.83L14 14l-4-4 6.14-6.14z"></path><path d="M5 21a2 2 0 0 1-2-2"></path></svg>
+                    </button>
+                </div>
+                <input type="color" id="paint-color" class="color-picker" value="#000000" title="Color">
+                <input type="range" id="paint-size" class="brush-size" min="1" max="50" value="5" title="Brush Size">
+                <button class="icon-btn" id="paint-clear-btn" title="Clear Canvas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
+            </div>
+            <div class="paint-canvas-container">
+                <canvas id="paint-canvas" width="200" height="200"></canvas>
+            </div>
+            <div class="modal-actions">
+                <button id="save-paint-btn" class="primary-btn blue">Save Drawing</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
