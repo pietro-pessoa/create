@@ -69,6 +69,12 @@
                 <!-- Left Panel: Stage + Sprites -->
                 <div class="left-panel">
                     <div class="stage-container">
+                        <div id="phase-selector" class="phase-selector">
+                            <button class="phase-btn active" data-phase="1">Fase 1</button>
+                            <button class="phase-btn" data-phase="2">Fase 2</button>
+                            <button class="phase-btn" data-phase="3">Fase 3</button>
+                            <button id="add-phase-btn" class="add-phase-btn" title="Nova Fase">+</button>
+                        </div>
                         <canvas id="stage-canvas" width="480" height="360"></canvas>
                         <div id="controls-overlay" class="controls-overlay">
                             <div id="joystick-overlay" class="joystick-container">
@@ -104,7 +110,15 @@
                                     <input type="number" id="prop-size" value="100">
                                 </div>
                                 <div class="prop-group">
-                                    <label>Direction</label>
+                                    <label>Hit. L</label>
+                                    <input type="number" id="prop-hitw" value="50" title="Largura da Colisão">
+                                </div>
+                                <div class="prop-group">
+                                    <label>Hit. A</label>
+                                    <input type="number" id="prop-hith" value="50" title="Altura da Colisão">
+                                </div>
+                                <div class="prop-group">
+                                    <label>Dir</label>
                                     <input type="number" id="prop-dir" value="90">
                                 </div>
                             </div>
@@ -235,6 +249,14 @@
                     </button>
                     <button class="icon-btn paint-tool-btn" id="tool-bucket" title="Fill Bucket">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19.23 6L14 11.23a2 2 0 0 1-2.83 0L3 3.05"></path><path d="M16 13.23L11.77 17.5a2 2 0 0 1-2.83 0L3 11.5"></path><path d="M16.14 3.86a2 2 0 0 1 2.83 0l1.17 1.17a2 2 0 0 1 0 2.83L14 14l-4-4 6.14-6.14z"></path><path d="M5 21a2 2 0 0 1-2-2"></path></svg>
+                    </button>
+                </div>
+                <div class="paint-tools-group">
+                    <button class="icon-btn" id="tool-undo" title="Undo">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path></svg>
+                    </button>
+                    <button class="icon-btn" id="tool-redo" title="Redo">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 7v6h-6"></path><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path></svg>
                     </button>
                 </div>
                 <input type="color" id="paint-color" class="color-picker" value="#000000" title="Color">
