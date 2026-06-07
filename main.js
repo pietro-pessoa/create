@@ -45,7 +45,12 @@ const locales = {
         blockDo: "do %1",
         optLeft: "Left", optRight: "Right", optUp: "Up", optDown: "Down",
         optBarrier: "Barrier", optEdge: "Edge",
-        catEvents: "Events", catMotion: "Motion", catGame: "Game", catLooks: "Looks", catLogic: "Logic", catSensing: "Sensing"
+        catEvents: "Events", catMotion: "Motion", catGame: "Game", catLooks: "Looks", catLogic: "Logic", catSensing: "Sensing", catPen: "Pen",
+        blockPenClear: "Clear all", blockPenDown: "Pen down", blockPenUp: "Pen up", blockPenSetColor: "Set pen color to %1", blockPenChangeColor: "Change pen color by %1", blockPenSetSize: "Set pen size to %1", blockPenChangeSize: "Change pen size by %1", blockPenStamp: "Stamp",
+        blockBroadcast: "Broadcast %1", blockBroadcastWait: "Broadcast %1 and wait", blockWhenReceive: "When I receive %1", blockCreateClone: "Create clone of %1", blockWhenCloned: "When I start as a clone", blockDeleteClone: "Delete this clone",
+        blockSetRotationStyle: "Set rotation style %1", blockTurnLeft: "Turn left %1 degrees", blockTurnRight: "Turn right %1 degrees", blockGlideToObject: "Glide %1 secs to %2", blockPointTowards: "Point towards %1", blockChangeSpeed: "Change speed by %1",
+        blockNextCostume: "Next costume", blockSwitchCostume: "Switch costume to %1", blockChangeEffect: "Change %1 effect by %2", blockSetEffect: "Set %1 effect to %2", blockClearEffects: "Clear graphic effects", blockGoToLayer: "Go to %1 layer",
+        blockMouseX: "Mouse X", blockMouseY: "Mouse Y", blockMouseDown: "Mouse down?", blockTimer: "Timer", blockResetTimer: "Reset timer"
     },
     pt: {
         appSubtitle: "Seu ambiente de programação em blocos offline",
@@ -92,7 +97,12 @@ const locales = {
         blockDo: "fazer %1",
         optLeft: "Esquerda", optRight: "Direita", optUp: "Cima", optDown: "Baixo",
         optBarrier: "Barreira", optEdge: "Borda",
-        catEvents: "Eventos", catMotion: "Movimento", catGame: "Jogo", catLooks: "Aparência", catLogic: "Lógica", catSensing: "Sensores"
+        catEvents: "Eventos", catMotion: "Movimento", catGame: "Jogo", catLooks: "Aparência", catLogic: "Lógica", catSensing: "Sensores", catPen: "Caneta",
+        blockPenClear: "Apagar tudo", blockPenDown: "Abaixar caneta", blockPenUp: "Levantar caneta", blockPenSetColor: "Mudar cor da caneta para %1", blockPenChangeColor: "Adicionar %1 à cor da caneta", blockPenSetSize: "Mudar tamanho da caneta para %1", blockPenChangeSize: "Adicionar %1 ao tamanho da caneta", blockPenStamp: "Carimbar",
+        blockBroadcast: "Transmitir %1", blockBroadcastWait: "Transmitir %1 e esperar", blockWhenReceive: "Quando eu receber %1", blockCreateClone: "Criar clone de %1", blockWhenCloned: "Quando eu começar como um clone", blockDeleteClone: "Apagar este clone",
+        blockSetRotationStyle: "Mudar estilo de rotação para %1", blockTurnLeft: "Girar para esquerda %1 graus", blockTurnRight: "Girar para direita %1 graus", blockGlideToObject: "Deslizar %1 segs até %2", blockPointTowards: "Apontar para %1", blockChangeSpeed: "Mudar velocidade por %1",
+        blockNextCostume: "Próxima fantasia", blockSwitchCostume: "Mudar fantasia para %1", blockChangeEffect: "Adicionar %2 ao efeito %1", blockSetEffect: "Mudar efeito %1 para %2", blockClearEffects: "Remover efeitos gráficos", blockGoToLayer: "Ir para a camada %1",
+        blockMouseX: "Mouse X", blockMouseY: "Mouse Y", blockMouseDown: "Mouse pressionado?", blockTimer: "Cronômetro", blockResetTimer: "Zerar cronômetro"
     },
     es: {
         appSubtitle: "Tu entorno de programación de bloques sin conexión",
@@ -139,7 +149,12 @@ const locales = {
         blockDo: "hacer %1",
         optLeft: "Izquierda", optRight: "Derecha", optUp: "Arriba", optDown: "Abajo",
         optBarrier: "Barrera", optEdge: "Borde",
-        catEvents: "Eventos", catMotion: "Movimiento", catGame: "Juego", catLooks: "Apariencia", catLogic: "Lógica", catSensing: "Sensores"
+        catEvents: "Eventos", catMotion: "Movimiento", catGame: "Juego", catLooks: "Apariencia", catLogic: "Lógica", catSensing: "Sensores", catPen: "Lápiz",
+        blockPenClear: "Borrar todo", blockPenDown: "Bajar lápiz", blockPenUp: "Subir lápiz", blockPenSetColor: "Fijar color de lápiz a %1", blockPenChangeColor: "Cambiar color de lápiz por %1", blockPenSetSize: "Fijar tamaño de lápiz a %1", blockPenChangeSize: "Cambiar tamaño de lápiz por %1", blockPenStamp: "Sellar",
+        blockBroadcast: "Enviar %1", blockBroadcastWait: "Enviar %1 y esperar", blockWhenReceive: "Al recibir %1", blockCreateClone: "Crear clon de %1", blockWhenCloned: "Al comenzar como clon", blockDeleteClone: "Eliminar este clon",
+        blockSetRotationStyle: "Fijar estilo de rotación a %1", blockTurnLeft: "Girar a la izquierda %1 grados", blockTurnRight: "Girar a la derecha %1 grados", blockGlideToObject: "Deslizar %1 segs a %2", blockPointTowards: "Apuntar hacia %1", blockChangeSpeed: "Cambiar velocidad por %1",
+        blockNextCostume: "Siguiente disfraz", blockSwitchCostume: "Cambiar disfraz a %1", blockChangeEffect: "Sumar %2 al efecto %1", blockSetEffect: "Dar al efecto %1 el valor %2", blockClearEffects: "Quitar efectos gráficos", blockGoToLayer: "Ir a la capa %1",
+        blockMouseX: "Posición X del ratón", blockMouseY: "Posición Y del ratón", blockMouseDown: "¿Ratón presionado?", blockTimer: "Cronómetro", blockResetTimer: "Reiniciar cronómetro"
     },
     ja: {
         appSubtitle: "オフラインのブロックプログラミング環境",
@@ -186,7 +201,12 @@ const locales = {
         blockDo: "する %1",
         optLeft: "左", optRight: "右", optUp: "上", optDown: "下",
         optBarrier: "バリア", optEdge: "端",
-        catEvents: "イベント", catMotion: "動き", catGame: "ゲーム", catLooks: "見た目", catLogic: "論理", catSensing: "調べる"
+        catEvents: "イベント", catMotion: "動き", catGame: "ゲーム", catLooks: "見た目", catLogic: "論理", catSensing: "調べる", catPen: "ペン",
+        blockPenClear: "すべて消す", blockPenDown: "ペンを下ろす", blockPenUp: "ペンを上げる", blockPenSetColor: "ペンの色を %1 にする", blockPenChangeColor: "ペンの色を %1 ずつ変える", blockPenSetSize: "ペンの太さを %1 にする", blockPenChangeSize: "ペンの太さを %1 ずつ変える", blockPenStamp: "スタンプ",
+        blockBroadcast: "%1 を送る", blockBroadcastWait: "%1 を送って待つ", blockWhenReceive: "%1 を受け取ったとき", blockCreateClone: "%1 のクローンを作る", blockWhenCloned: "クローンされたとき", blockDeleteClone: "このクローンを削除する",
+        blockSetRotationStyle: "回転方法を %1 にする", blockTurnLeft: "%1 度左に回す", blockTurnRight: "%1 度右に回す", blockGlideToObject: "%1 秒で %2 へ行く", blockPointTowards: "%1 へ向ける", blockChangeSpeed: "速度を %1 ずつ変える",
+        blockNextCostume: "次のコスチューム", blockSwitchCostume: "コスチュームを %1 にする", blockChangeEffect: "画像効果 %1 を %2 ずつ変える", blockSetEffect: "画像効果 %1 を %2 にする", blockClearEffects: "画像効果をなくす", blockGoToLayer: "%1 のレイヤーへ行く",
+        blockMouseX: "マウスのX座標", blockMouseY: "マウスのY座標", blockMouseDown: "マウスが押された", blockTimer: "タイマー", blockResetTimer: "タイマーをリセット"
     }
 };
 
@@ -514,6 +534,145 @@ document.addEventListener('DOMContentLoaded', () => {
                 "args0": [{ "type": "input_value", "name": "OBJ_NAME", "check": "String" }],
                 "output": "Boolean",
                 "colour": 190
+            },
+            {
+                "type": "audio_play_ready",
+                "message0": "Tocar som %1",
+                "args0": [{ "type": "field_dropdown", "name": "SOUND", "options": [
+                    ["Gravando (10)", "Gravando (10).m4a"],
+                    ["Gravando (16)", "Gravando (16).m4a"],
+                    ["Gravando (3)", "Gravando (3).m4a"],
+                    ["Gravando (4)", "Gravando (4).m4a"],
+                    ["Gravando (5)", "Gravando (5).m4a"],
+                    ["hello", "hello.m4a"]
+                ] }],
+                "previousStatement": null,
+                "nextStatement": null,
+                "colour": 330
+            },
+            {
+                "type": "audio_play_custom",
+                "message0": "Tocar som gravado %1",
+                "args0": [{ "type": "input_value", "name": "AUDIO_NAME", "check": "String" }],
+                "previousStatement": null,
+                "nextStatement": null,
+                "colour": 330
+            },
+            {
+                "type": "audio_loop_ready",
+                "message0": "Tocar som contínuo %1",
+                "args0": [{ "type": "field_dropdown", "name": "SOUND", "options": [
+                    ["Gravando (10)", "Gravando (10).m4a"],
+                    ["Gravando (16)", "Gravando (16).m4a"],
+                    ["Gravando (3)", "Gravando (3).m4a"],
+                    ["Gravando (4)", "Gravando (4).m4a"],
+                    ["Gravando (5)", "Gravando (5).m4a"],
+                    ["hello", "hello.m4a"]
+                ] }],
+                "previousStatement": null,
+                "nextStatement": null,
+                "colour": 330
+            },
+            {
+                "type": "audio_loop_custom",
+                "message0": "Tocar som gravado contínuo %1",
+                "args0": [{ "type": "input_value", "name": "AUDIO_NAME", "check": "String" }],
+                "previousStatement": null,
+                "nextStatement": null,
+                "colour": 330
+            },
+            {
+                "type": "pen_clear", "message0": t.blockPenClear, "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_down", "message0": t.blockPenDown, "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_up", "message0": t.blockPenUp, "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_set_color", "message0": t.blockPenSetColor, "args0": [{ "type": "input_value", "name": "COLOR", "check": "String" }], "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_change_color", "message0": t.blockPenChangeColor, "args0": [{ "type": "input_value", "name": "COLOR_VAL", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_set_size", "message0": t.blockPenSetSize, "args0": [{ "type": "input_value", "name": "SIZE", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_change_size", "message0": t.blockPenChangeSize, "args0": [{ "type": "input_value", "name": "SIZE", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "pen_stamp", "message0": t.blockPenStamp, "previousStatement": null, "nextStatement": null, "colour": 160
+            },
+            {
+                "type": "event_broadcast", "message0": t.blockBroadcast, "args0": [{ "type": "input_value", "name": "MSG", "check": "String" }], "previousStatement": null, "nextStatement": null, "colour": 65
+            },
+            {
+                "type": "event_broadcast_and_wait", "message0": t.blockBroadcastWait, "args0": [{ "type": "input_value", "name": "MSG", "check": "String" }], "previousStatement": null, "nextStatement": null, "colour": 65
+            },
+            {
+                "type": "event_when_receive", "message0": t.blockWhenReceive, "args0": [{ "type": "field_input", "name": "MSG", "text": "message1" }], "nextStatement": null, "colour": 65
+            },
+            {
+                "type": "control_create_clone", "message0": t.blockCreateClone, "args0": [{ "type": "input_value", "name": "OBJ", "check": "String" }], "previousStatement": null, "nextStatement": null, "colour": 65
+            },
+            {
+                "type": "event_when_cloned", "message0": t.blockWhenCloned, "nextStatement": null, "colour": 65
+            },
+            {
+                "type": "control_delete_clone", "message0": t.blockDeleteClone, "previousStatement": null, "colour": 65
+            },
+            {
+                "type": "motion_set_rotation_style", "message0": t.blockSetRotationStyle, "args0": [{ "type": "field_dropdown", "name": "STYLE", "options": [["left-right", "LEFT_RIGHT"], ["don't rotate", "NONE"], ["all around", "ALL"]] }], "previousStatement": null, "nextStatement": null, "colour": 230
+            },
+            {
+                "type": "motion_turn_left", "message0": t.blockTurnLeft, "args0": [{ "type": "input_value", "name": "DEGREES", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 230
+            },
+            {
+                "type": "motion_turn_right", "message0": t.blockTurnRight, "args0": [{ "type": "input_value", "name": "DEGREES", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 230
+            },
+            {
+                "type": "motion_glide_to_object", "message0": t.blockGlideToObject, "args0": [{ "type": "input_value", "name": "SECS", "check": "Number" }, { "type": "input_value", "name": "OBJ", "check": "String" }], "previousStatement": null, "nextStatement": null, "colour": 230
+            },
+            {
+                "type": "motion_point_towards", "message0": t.blockPointTowards, "args0": [{ "type": "input_value", "name": "OBJ", "check": "String" }], "previousStatement": null, "nextStatement": null, "colour": 230
+            },
+            {
+                "type": "motion_change_speed", "message0": t.blockChangeSpeed, "args0": [{ "type": "input_value", "name": "SPEED", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 230
+            },
+            {
+                "type": "looks_next_costume", "message0": t.blockNextCostume, "previousStatement": null, "nextStatement": null, "colour": 290
+            },
+            {
+                "type": "looks_switch_costume", "message0": t.blockSwitchCostume, "args0": [{ "type": "input_value", "name": "COSTUME", "check": ["Number", "String"] }], "previousStatement": null, "nextStatement": null, "colour": 290
+            },
+            {
+                "type": "looks_change_effect", "message0": t.blockChangeEffect, "args0": [{ "type": "field_dropdown", "name": "EFFECT", "options": [["COLOR", "COLOR"], ["GHOST", "GHOST"]] }, { "type": "input_value", "name": "VAL", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 290
+            },
+            {
+                "type": "looks_set_effect", "message0": t.blockSetEffect, "args0": [{ "type": "field_dropdown", "name": "EFFECT", "options": [["COLOR", "COLOR"], ["GHOST", "GHOST"]] }, { "type": "input_value", "name": "VAL", "check": "Number" }], "previousStatement": null, "nextStatement": null, "colour": 290
+            },
+            {
+                "type": "looks_clear_effects", "message0": t.blockClearEffects, "previousStatement": null, "nextStatement": null, "colour": 290
+            },
+            {
+                "type": "looks_go_to_layer", "message0": t.blockGoToLayer, "args0": [{ "type": "field_dropdown", "name": "LAYER", "options": [["Front", "FRONT"], ["Back", "BACK"]] }], "previousStatement": null, "nextStatement": null, "colour": 290
+            },
+            {
+                "type": "sensing_mouse_x", "message0": t.blockMouseX, "output": "Number", "colour": 190
+            },
+            {
+                "type": "sensing_mouse_y", "message0": t.blockMouseY, "output": "Number", "colour": 190
+            },
+            {
+                "type": "sensing_mouse_down", "message0": t.blockMouseDown, "output": "Boolean", "colour": 190
+            },
+            {
+                "type": "sensing_timer", "message0": t.blockTimer, "output": "Number", "colour": 190
+            },
+            {
+                "type": "sensing_reset_timer", "message0": t.blockResetTimer, "previousStatement": null, "nextStatement": null, "colour": 190
             }
         ]);
         
@@ -524,13 +683,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <block type="event_when_clicked"></block>
                 <block type="event_when_touching_object"></block>
                 <block type="event_when_phase"></block>
+                <block type="event_when_receive"></block>
+                <block type="event_when_cloned"></block>
+                <block type="event_broadcast"><value name="MSG"><shadow type="text"><field name="TEXT">message1</field></shadow></value></block>
+                <block type="event_broadcast_and_wait"><value name="MSG"><shadow type="text"><field name="TEXT">message1</field></shadow></value></block>
+                <block type="control_create_clone"><value name="OBJ"><shadow type="text"><field name="TEXT">myself</field></shadow></value></block>
+                <block type="control_delete_clone"></block>
                 <block type="event_always"></block>
                 <block type="event_on_collision"></block>
             </category>
             <category name="${t.catMotion}" colour="230">
                 <block type="motion_move_steps"><value name="STEPS"><shadow type="math_number"><field name="NUM">10</field></shadow></value></block>
-                <block type="motion_jump"></block>
+                <block type="motion_turn_left"><value name="DEGREES"><shadow type="math_number"><field name="NUM">15</field></shadow></value></block>
+                <block type="motion_turn_right"><value name="DEGREES"><shadow type="math_number"><field name="NUM">15</field></shadow></value></block>
                 <block type="motion_point_direction"></block>
+                <block type="motion_point_towards"><value name="OBJ"><shadow type="text"><field name="TEXT">Enemy</field></shadow></value></block>
                 <block type="motion_change_x"><value name="DELTA"><shadow type="math_number"><field name="NUM">10</field></shadow></value></block>
                 <block type="motion_change_y"><value name="DELTA"><shadow type="math_number"><field name="NUM">10</field></shadow></value></block>
                 <block type="motion_go_to">
@@ -542,6 +709,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <value name="X"><shadow type="math_number"><field name="NUM">240</field></shadow></value>
                     <value name="Y"><shadow type="math_number"><field name="NUM">180</field></shadow></value>
                 </block>
+                <block type="motion_glide_to_object">
+                    <value name="SECS"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+                    <value name="OBJ"><shadow type="text"><field name="TEXT">Enemy</field></shadow></value>
+                </block>
+                <block type="motion_change_speed"><value name="SPEED"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+                <block type="motion_set_rotation_style"></block>
+                <block type="motion_jump"></block>
                 <block type="motion_enable_joystick"></block>
                 <block type="motion_show_jump"></block>
             </category>
@@ -549,7 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <block type="game_set_life"><value name="LIFE"><shadow type="math_number"><field name="NUM">100</field></shadow></value></block>
                 <block type="game_change_life"><value name="LIFE"><shadow type="math_number"><field name="NUM">-10</field></shadow></value></block>
                 <block type="game_set_barrier"></block>
-                                <block type="game_set_map_size">
+                <block type="game_set_map_size">
                     <value name="WIDTH"><shadow type="math_number"><field name="NUM">1000</field></shadow></value>
                     <value name="HEIGHT"><shadow type="math_number"><field name="NUM">1000</field></shadow></value>
                 </block>
@@ -561,8 +735,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <category name="${t.catLooks}" colour="290">
                 <block type="looks_switch_phase"></block>
                 <block type="looks_switch_scenario"></block>
+                <block type="looks_next_costume"></block>
+                <block type="looks_switch_costume"><value name="COSTUME"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
                 <block type="looks_set_size"><value name="SIZE"><shadow type="math_number"><field name="NUM">100</field></shadow></value></block>
                 <block type="looks_change_size"><value name="DELTA"><shadow type="math_number"><field name="NUM">10</field></shadow></value></block>
+                <block type="looks_change_effect">
+                    <value name="VAL"><shadow type="math_number"><field name="NUM">25</field></shadow></value>
+                </block>
+                <block type="looks_set_effect">
+                    <value name="VAL"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+                </block>
+                <block type="looks_clear_effects"></block>
+                <block type="looks_go_to_layer"></block>
                 <block type="looks_say">
                     <value name="TEXT"><shadow type="text"><field name="TEXT">Hello!</field></shadow></value>
                     <value name="TIME"><shadow type="math_number"><field name="NUM">2</field></shadow></value>
@@ -576,6 +760,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <block type="sensing_distance_to"><value name="OBJ_NAME"><shadow type="text"><field name="TEXT">Enemy</field></shadow></value></block>
                 <block type="sensing_pos_x"></block>
                 <block type="sensing_pos_y"></block>
+                <block type="sensing_mouse_x"></block>
+                <block type="sensing_mouse_y"></block>
+                <block type="sensing_mouse_down"></block>
+                <block type="sensing_timer"></block>
+                <block type="sensing_reset_timer"></block>
             </category>
             <category name="${t.catLogic}" colour="%{BKY_LOGIC_HUE}">
                 <block type="controls_if"></block>
@@ -583,6 +772,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 <block type="logic_operation"></block>
                 <block type="logic_boolean"></block>
                 <block type="math_number"></block>
+                <block type="text"></block>
+            </category>
+            <category name="Audio" colour="330">
+                <block type="audio_play_ready"></block>
+                <block type="audio_play_custom">
+                    <value name="AUDIO_NAME"><shadow type="text"><field name="TEXT">my_audio</field></shadow></value>
+                </block>
+                <block type="audio_loop_ready"></block>
+                <block type="audio_loop_custom">
+                    <value name="AUDIO_NAME"><shadow type="text"><field name="TEXT">my_audio</field></shadow></value>
+                </block>
+            </category>
+            <category name="${t.catPen}" colour="160">
+                <block type="pen_clear"></block>
+                <block type="pen_down"></block>
+                <block type="pen_up"></block>
+                <block type="pen_set_color"><value name="COLOR"><shadow type="text"><field name="TEXT">#ff0000</field></shadow></value></block>
+                <block type="pen_change_color"><value name="COLOR_VAL"><shadow type="math_number"><field name="NUM">10</field></shadow></value></block>
+                <block type="pen_set_size"><value name="SIZE"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+                <block type="pen_change_size"><value name="SIZE"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+                <block type="pen_stamp"></block>
             </category>
         `;
     }
@@ -629,6 +839,54 @@ document.addEventListener('DOMContentLoaded', () => {
     jsGen.forBlock['motion_glide'] = (block, generator) => `await GameAPI.glide(__objId, ${generator.valueToCode(block, 'SECS', javascript.Order.ATOMIC) || '1'}, ${generator.valueToCode(block, 'X', javascript.Order.ATOMIC) || '0'}, ${generator.valueToCode(block, 'Y', javascript.Order.ATOMIC) || '0'});\n`;
     jsGen.forBlock['game_bounce_edge'] = () => `GameAPI.bounceEdge(__objId);\n`;
 
+    jsGen.forBlock['audio_play_ready'] = (block) => `GameAPI.playSound('${block.getFieldValue('SOUND')}', false);\n`;
+    jsGen.forBlock['audio_play_custom'] = (block, generator) => `GameAPI.playCustomSound(${generator.valueToCode(block, 'AUDIO_NAME', javascript.Order.ATOMIC) || "''"}, false);\n`;
+    jsGen.forBlock['audio_loop_ready'] = (block) => `GameAPI.playSound('${block.getFieldValue('SOUND')}', true);\n`;
+    jsGen.forBlock['audio_loop_custom'] = (block, generator) => `GameAPI.playCustomSound(${generator.valueToCode(block, 'AUDIO_NAME', javascript.Order.ATOMIC) || "''"}, true);\n`;
+
+    // --- New Blocks Generators ---
+    jsGen.forBlock['pen_clear'] = () => `GameAPI.penClear();\n`;
+    jsGen.forBlock['pen_down'] = () => `GameAPI.penDown(__objId);\n`;
+    jsGen.forBlock['pen_up'] = () => `GameAPI.penUp(__objId);\n`;
+    jsGen.forBlock['pen_set_color'] = (block, generator) => `GameAPI.penSetColor(__objId, ${generator.valueToCode(block, 'COLOR', javascript.Order.ATOMIC) || "'#000000'"});\n`;
+    jsGen.forBlock['pen_change_color'] = (block, generator) => `GameAPI.penChangeColor(__objId, ${generator.valueToCode(block, 'COLOR_VAL', javascript.Order.ATOMIC) || '0'});\n`;
+    jsGen.forBlock['pen_set_size'] = (block, generator) => `GameAPI.penSetSize(__objId, ${generator.valueToCode(block, 'SIZE', javascript.Order.ATOMIC) || '1'});\n`;
+    jsGen.forBlock['pen_change_size'] = (block, generator) => `GameAPI.penChangeSize(__objId, ${generator.valueToCode(block, 'SIZE', javascript.Order.ATOMIC) || '0'});\n`;
+    jsGen.forBlock['pen_stamp'] = () => `GameAPI.penStamp(__objId);\n`;
+
+    jsGen.forBlock['event_broadcast'] = (block, generator) => `GameAPI.broadcast(${generator.valueToCode(block, 'MSG', javascript.Order.ATOMIC) || "''"});\n`;
+    jsGen.forBlock['event_broadcast_and_wait'] = (block, generator) => `await GameAPI.broadcastAndWait(${generator.valueToCode(block, 'MSG', javascript.Order.ATOMIC) || "''"});\n`;
+    jsGen.forBlock['event_when_receive'] = (block, generator) => {
+        const msg = block.getFieldValue('MSG');
+        const code = generator.statementToCode(block, 'DO');
+        return `GameAPI.onMessage('${msg}', async (__objId) => {\n${code}\n});\n`;
+    };
+    jsGen.forBlock['control_create_clone'] = (block, generator) => `GameAPI.createClone(__objId, ${generator.valueToCode(block, 'OBJ', javascript.Order.ATOMIC) || "''"});\n`;
+    jsGen.forBlock['event_when_cloned'] = (block, generator) => {
+        const code = generator.statementToCode(block, 'DO');
+        return `GameAPI.onCloned(__objId, async () => {\n${code}\n});\n`;
+    };
+    jsGen.forBlock['control_delete_clone'] = () => `GameAPI.deleteClone(__objId);\nreturn;\n`;
+
+    jsGen.forBlock['motion_set_rotation_style'] = (block) => `GameAPI.setRotationStyle(__objId, '${block.getFieldValue('STYLE')}');\n`;
+    jsGen.forBlock['motion_turn_left'] = (block, generator) => `GameAPI.turn(__objId, -(${generator.valueToCode(block, 'DEGREES', javascript.Order.ATOMIC) || '0'}));\n`;
+    jsGen.forBlock['motion_turn_right'] = (block, generator) => `GameAPI.turn(__objId, ${generator.valueToCode(block, 'DEGREES', javascript.Order.ATOMIC) || '0'});\n`;
+    jsGen.forBlock['motion_glide_to_object'] = (block, generator) => `await GameAPI.glideToObject(__objId, ${generator.valueToCode(block, 'SECS', javascript.Order.ATOMIC) || '1'}, ${generator.valueToCode(block, 'OBJ', javascript.Order.ATOMIC) || "''"});\n`;
+    jsGen.forBlock['motion_point_towards'] = (block, generator) => `GameAPI.pointTowards(__objId, ${generator.valueToCode(block, 'OBJ', javascript.Order.ATOMIC) || "''"});\n`;
+    jsGen.forBlock['motion_change_speed'] = (block, generator) => `GameAPI.changeSpeed(__objId, ${generator.valueToCode(block, 'SPEED', javascript.Order.ATOMIC) || '0'});\n`;
+
+    jsGen.forBlock['looks_next_costume'] = () => `GameAPI.nextCostume(__objId);\n`;
+    jsGen.forBlock['looks_switch_costume'] = (block, generator) => `GameAPI.switchCostume(__objId, ${generator.valueToCode(block, 'COSTUME', javascript.Order.ATOMIC) || '1'});\n`;
+    jsGen.forBlock['looks_change_effect'] = (block, generator) => `GameAPI.changeEffect(__objId, '${block.getFieldValue('EFFECT')}', ${generator.valueToCode(block, 'VAL', javascript.Order.ATOMIC) || '0'});\n`;
+    jsGen.forBlock['looks_set_effect'] = (block, generator) => `GameAPI.setEffect(__objId, '${block.getFieldValue('EFFECT')}', ${generator.valueToCode(block, 'VAL', javascript.Order.ATOMIC) || '0'});\n`;
+    jsGen.forBlock['looks_clear_effects'] = () => `GameAPI.clearEffects(__objId);\n`;
+    jsGen.forBlock['looks_go_to_layer'] = (block) => `GameAPI.goToLayer(__objId, '${block.getFieldValue('LAYER')}');\n`;
+
+    jsGen.forBlock['sensing_mouse_x'] = () => [`GameAPI.mouseX()`, javascript.Order.NONE];
+    jsGen.forBlock['sensing_mouse_y'] = () => [`GameAPI.mouseY()`, javascript.Order.NONE];
+    jsGen.forBlock['sensing_mouse_down'] = () => [`GameAPI.mouseDown()`, javascript.Order.NONE];
+    jsGen.forBlock['sensing_timer'] = () => [`GameAPI.timer()`, javascript.Order.NONE];
+    jsGen.forBlock['sensing_reset_timer'] = () => `GameAPI.resetTimer();\n`;
 
     // --- DOM Elements ---
     const menuView = document.getElementById('menu-view');
@@ -645,6 +903,192 @@ document.addEventListener('DOMContentLoaded', () => {
     const addSpriteDrawBtn = document.getElementById('add-sprite-draw-btn');
     const uploadSpriteInput = document.getElementById('upload-sprite-input');
     
+    // --- Tabs Logic ---
+    const tabObjects = document.getElementById('tab-objects');
+    const tabScenarios = document.getElementById('tab-scenarios');
+    const tabAudios = document.getElementById('tab-audios');
+    const contentObjects = document.getElementById('content-objects');
+    const contentScenarios = document.getElementById('content-scenarios');
+    const contentAudios = document.getElementById('content-audios');
+
+    function switchTab(tab) {
+        tabObjects.classList.remove('active');
+        tabScenarios.classList.remove('active');
+        tabAudios.classList.remove('active');
+        contentObjects.style.display = 'none';
+        contentScenarios.style.display = 'none';
+        contentAudios.style.display = 'none';
+        contentObjects.classList.remove('active');
+        contentScenarios.classList.remove('active');
+        contentAudios.classList.remove('active');
+
+        if (tab === 'objects') {
+            tabObjects.classList.add('active');
+            contentObjects.style.display = 'block';
+            contentObjects.classList.add('active');
+        } else if (tab === 'scenarios') {
+            tabScenarios.classList.add('active');
+            contentScenarios.style.display = 'block';
+            contentScenarios.classList.add('active');
+        } else if (tab === 'audios') {
+            tabAudios.classList.add('active');
+            contentAudios.style.display = 'block';
+            contentAudios.classList.add('active');
+            renderAudios();
+        }
+    }
+
+    tabObjects.addEventListener('click', () => switchTab('objects'));
+    tabScenarios.addEventListener('click', () => switchTab('scenarios'));
+    tabAudios.addEventListener('click', () => switchTab('audios'));
+
+    // --- Audio Logic ---
+    const recordModal = document.getElementById('record-modal');
+    const headerRecordBtn = document.getElementById('header-record-btn');
+    const addSoundBtn = document.getElementById('add-sound-btn');
+    const closeRecordBtn = document.getElementById('close-record-btn');
+    const startRecordBtn = document.getElementById('start-record-btn');
+    const stopRecordBtn = document.getElementById('stop-record-btn');
+    const saveRecordBtn = document.getElementById('save-record-btn');
+    const recordNameInput = document.getElementById('record-name');
+    const recordPreview = document.getElementById('record-preview');
+    const uploadSoundInput = document.getElementById('upload-sound-input');
+    
+    let mediaRecorder;
+    let audioChunks = [];
+    let recordedAudioBlob = null;
+    let recordedAudioUrl = null;
+    let playingAudios = [];
+
+    function openRecordModal() {
+        recordModal.style.display = 'flex';
+        recordPreview.style.display = 'none';
+        saveRecordBtn.disabled = true;
+        startRecordBtn.disabled = false;
+        stopRecordBtn.disabled = true;
+        audioChunks = [];
+        recordedAudioBlob = null;
+    }
+
+    headerRecordBtn.addEventListener('click', openRecordModal);
+    addSoundBtn.addEventListener('click', openRecordModal);
+    closeRecordBtn.addEventListener('click', () => recordModal.style.display = 'none');
+
+    startRecordBtn.addEventListener('click', async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            audioChunks = [];
+            
+            mediaRecorder.ondataavailable = event => {
+                if (event.data.size > 0) audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = () => {
+                recordedAudioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                recordedAudioUrl = URL.createObjectURL(recordedAudioBlob);
+                recordPreview.src = recordedAudioUrl;
+                recordPreview.style.display = 'block';
+                saveRecordBtn.disabled = false;
+                stream.getTracks().forEach(track => track.stop());
+            };
+
+            mediaRecorder.start();
+            startRecordBtn.disabled = true;
+            stopRecordBtn.disabled = false;
+            startRecordBtn.textContent = 'Recording...';
+        } catch (err) {
+            console.error("Microphone access denied or error:", err);
+            alert("Could not access microphone.");
+        }
+    });
+
+    stopRecordBtn.addEventListener('click', () => {
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+            mediaRecorder.stop();
+            startRecordBtn.textContent = 'Start Recording';
+        }
+    });
+
+    saveRecordBtn.addEventListener('click', () => {
+        if (recordedAudioBlob) {
+            const reader = new FileReader();
+            reader.readAsDataURL(recordedAudioBlob);
+            reader.onloadend = () => {
+                const base64Audio = reader.result;
+                const audioName = recordNameInput.value.trim() || 'my_audio';
+                addCustomAudio(audioName, base64Audio);
+                recordModal.style.display = 'none';
+            };
+        }
+    });
+
+    function addCustomAudio(name, dataUrl) {
+        if (!currentProject.audios) currentProject.audios = [];
+        currentProject.audios.push({ id: 'audio_' + Date.now(), name: name, src: dataUrl });
+        renderAudios();
+    }
+
+    uploadSoundInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            addCustomAudio(file.name.replace(/\.[^/.]+$/, ""), event.target.result);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    const readyMadeSounds = [
+        { id: 'ready_1', name: 'Gravando (10)', src: 'Gravando (10).m4a' },
+        { id: 'ready_2', name: 'Gravando (16)', src: 'Gravando (16).m4a' },
+        { id: 'ready_3', name: 'Gravando (3)', src: 'Gravando (3).m4a' },
+        { id: 'ready_4', name: 'Gravando (4)', src: 'Gravando (4).m4a' },
+        { id: 'ready_5', name: 'Gravando (5)', src: 'Gravando (5).m4a' },
+        { id: 'ready_6', name: 'hello', src: 'hello.m4a' }
+    ];
+
+    function getProjectAudios() {
+        if (currentProject && currentProject.audios) {
+            return readyMadeSounds.concat(currentProject.audios);
+        }
+        return readyMadeSounds;
+    }
+
+    const audiosList = document.getElementById('audios-list');
+
+    function renderAudios() {
+        audiosList.innerHTML = '';
+        getProjectAudios().forEach(audio => {
+            const card = document.createElement('div');
+            card.className = 'sprite-card';
+            card.innerHTML = `
+                <div style="width:50px;height:50px;background:#ff7e67;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                </div>
+                <div class="sprite-name">${audio.name}</div>
+                <button class="delete-sprite-btn" title="Delete">X</button>
+            `;
+            
+            card.onclick = () => {
+                const audioObj = new Audio(audio.src);
+                audioObj.play();
+            };
+
+            const delBtn = card.querySelector('.delete-sprite-btn');
+            if (audio.id.startsWith('ready_')) {
+                delBtn.style.display = 'none'; // Cannot delete ready-made sounds
+            } else {
+                delBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    currentProject.audios = currentProject.audios.filter(a => a.id !== audio.id);
+                    renderAudios();
+                };
+            }
+            audiosList.appendChild(card);
+        });
+    }
+
     // Properties Panel
     const propName = document.getElementById('prop-name');
     const propX = document.getElementById('prop-x');
@@ -694,7 +1138,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'sprite_' + Date.now() + Math.floor(Math.random()*1000),
             name: name,
             type: isMascot ? 'mascot' : (src ? 'image' : 'custom'),
-            src: src || (isMascot ? 'mascot.png' : null),
+            costumes: templateObj.costumes ? [...templateObj.costumes] : [{ id: 'costume_' + Date.now(), src: src || (isMascot ? 'mascot.png' : null) }],
+            currentCostumeIndex: templateObj.currentCostumeIndex || 0,
             x: templateObj.x !== undefined ? templateObj.x : 240, 
             y: templateObj.y !== undefined ? templateObj.y : 180, 
             size: templateObj.size !== undefined ? templateObj.size : 100, 
@@ -920,6 +1365,16 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSprites();
             selectSprite(newSprite.id);
             stopGame(); 
+        } else if (paintingForTarget === 'costume') {
+            const sprite = getSprites().find(s => s.id === targetSpriteIdForCostume);
+            if (sprite) {
+                if (!sprite.costumes) sprite.costumes = [{id: 'c0', src: sprite.src}];
+                sprite.costumes.push({ id: 'costume_' + Date.now(), src: dataUrl });
+                sprite.currentCostumeIndex = sprite.costumes.length - 1;
+                renderSprites();
+                updatePropertiesPanel();
+                stopGame();
+            }
         }
         paintModal.classList.remove('active');
         draw();
@@ -957,13 +1412,15 @@ document.addEventListener('DOMContentLoaded', () => {
             card.onclick = () => selectSprite(sprite.id);
             
             let thumb = '';
-            if (sprite.type === 'mascot' || sprite.src) {
-                thumb = `<img src="${sprite.src}">`;
-                if (!spriteImages[sprite.id]) {
+            const currentSrc = sprite.costumes && sprite.costumes.length > 0 ? sprite.costumes[sprite.currentCostumeIndex].src : sprite.src;
+            if (currentSrc || sprite.type === 'mascot') {
+                thumb = `<img src="${currentSrc || 'mascot.png'}">`;
+                if (!spriteImages[sprite.id]) spriteImages[sprite.id] = {};
+                if (!spriteImages[sprite.id][sprite.currentCostumeIndex]) {
                     const img = new Image();
                     img.onload = () => { if (gameState.isRunning === false) draw(); };
-                    img.src = sprite.src;
-                    spriteImages[sprite.id] = img;
+                    img.src = currentSrc || 'mascot.png';
+                    spriteImages[sprite.id][sprite.currentCostumeIndex] = img;
                 }
             } else {
                 thumb = `<div style="width:50px;height:50px;background:#ddd;border-radius:8px;"></div>`;
@@ -972,10 +1429,22 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 ${thumb}
                 <div class="sprite-name">${sprite.name}</div>
+                <button class="add-costume-hover-btn" title="Add Costume">+</button>
                 <button class="duplicate-sprite-btn" title="Duplicate"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
                 <button class="delete-sprite-btn" title="Delete">X</button>
             `;
             
+            card.querySelector('.add-costume-hover-btn').onclick = (e) => {
+                e.stopPropagation();
+                paintingForTarget = 'costume';
+                targetSpriteIdForCostume = sprite.id;
+                pCtx.clearRect(0,0,paintCanvas.width, paintCanvas.height);
+                pCtx.globalCompositeOperation = 'source-over';
+                paintHistory = []; paintHistoryStep = -1;
+                savePaintState();
+                paintModal.classList.add('active');
+            };
+
             card.querySelector('.delete-sprite-btn').onclick = (e) => {
                 e.stopPropagation();
                 
@@ -996,7 +1465,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.querySelector('.duplicate-sprite-btn').onclick = (e) => {
                 e.stopPropagation();
-                const newSprite = createDefaultSprite(sprite.name + ' Copy', false, sprite.src, sprite);
+                const newSprite = createDefaultSprite(sprite.name + ' Copy', false, currentSrc, sprite);
                 newSprite.x += 20; newSprite.y += 20; // Offset copy
                 getSprites().push(newSprite);
                 renderSprites();
@@ -1031,6 +1500,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updatePropertiesPanel() {
         const sprite = getSprites().find(s => s.id === currentSpriteId);
+        const propCostume = document.getElementById('prop-costume');
         if (sprite) {
             propName.value = sprite.name;
             propX.value = Math.round(sprite.x);
@@ -1038,11 +1508,34 @@ document.addEventListener('DOMContentLoaded', () => {
             propSize.value = sprite.size;
             propDir.value = sprite.direction;
             propName.disabled = false; propX.disabled = false; propY.disabled = false; propSize.disabled = false; propDir.disabled = false;
+            
+            if (sprite.costumes) {
+                propCostume.innerHTML = '';
+                sprite.costumes.forEach((c, idx) => {
+                    const opt = document.createElement('option');
+                    opt.value = idx;
+                    opt.textContent = `Costume ${idx + 1}`;
+                    if (idx === sprite.currentCostumeIndex) opt.selected = true;
+                    propCostume.appendChild(opt);
+                });
+            }
         } else {
             propName.value = ''; propX.value = ''; propY.value = ''; propSize.value = ''; propDir.value = '';
             propName.disabled = true; propX.disabled = true; propY.disabled = true; propSize.disabled = true; propDir.disabled = true;
+            propCostume.innerHTML = '';
         }
     }
+
+    const propCostume = document.getElementById('prop-costume');
+    propCostume.addEventListener('change', (e) => {
+        if (!currentSpriteId) return;
+        const sprite = getSprites().find(s => s.id === currentSpriteId);
+        if (sprite) {
+            sprite.currentCostumeIndex = parseInt(e.target.value);
+            renderSprites();
+            stopGame();
+        }
+    });
 
     function syncPropertiesToSprite() {
         if (!currentSpriteId) return;
@@ -1104,6 +1597,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    document.getElementById('delete-costume-btn').addEventListener('click', () => {
+        if (!currentSpriteId) return;
+        const sprite = getSprites().find(s => s.id === currentSpriteId);
+        if (sprite && sprite.costumes && sprite.costumes.length > 1) {
+            sprite.costumes.splice(sprite.currentCostumeIndex, 1);
+            if (sprite.currentCostumeIndex >= sprite.costumes.length) sprite.currentCostumeIndex = sprite.costumes.length - 1;
+            renderSprites();
+            updatePropertiesPanel();
+            stopGame();
+        }
+    });
+
+    document.getElementById('upload-costume-input').addEventListener('change', (e) => {
+        if (!currentSpriteId) return;
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const sprite = getSprites().find(s => s.id === currentSpriteId);
+            if (sprite) {
+                if (!sprite.costumes) sprite.costumes = [{id: 'c0', src: sprite.src}];
+                sprite.costumes.push({ id: 'costume_' + Date.now(), src: event.target.result });
+                sprite.currentCostumeIndex = sprite.costumes.length - 1;
+                renderSprites();
+                updatePropertiesPanel();
+                stopGame();
+            }
+        };
+        reader.readAsDataURL(file);
+    });
+
 
     // --- Game Engine ---
     let gameState = {
@@ -1122,14 +1646,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let animationFrameId = null;
 
     window.GameAPI = {
-        moveSteps: async function(objId, steps) { 
-            const obj = gameState.objects[objId];
-            if(obj) {
+        moveSteps: function(id, steps) {
+            const obj = gameState.objects[id];
+            if (obj) {
+                const oldX = obj.x, oldY = obj.y;
                 const rad = (obj.direction - 90) * Math.PI / 180;
-                obj.x += Math.cos(rad) * steps; 
-                obj.y += Math.sin(rad) * steps;
+                const actualSteps = obj.speed !== undefined ? obj.speed : steps;
+                obj.x += actualSteps * Math.cos(rad);
+                obj.y += actualSteps * Math.sin(rad);
+                if(obj.penDown) gameState.penDrawings.push({type: 'line', x1: oldX, y1: oldY, x2: obj.x, y2: obj.y, color: obj.penColor, size: obj.penSize});
             }
-            await new Promise(r => setTimeout(r, 50)); 
         },
         pointDirection: function(objId, dir) {
             if(gameState.objects[objId]) { gameState.objects[objId].direction = parseInt(dir); }
@@ -1140,8 +1666,13 @@ document.addEventListener('DOMContentLoaded', () => {
         changeY: function(objId, delta) {
             if(gameState.objects[objId]) { gameState.objects[objId].y += delta; }
         },
-        goTo: function(objId, x, y) {
-            if(gameState.objects[objId]) { gameState.objects[objId].x = x; gameState.objects[objId].y = y; }
+        goTo: function(id, x, y) {
+            const obj = gameState.objects[id];
+            if (obj) {
+                const oldX = obj.x, oldY = obj.y;
+                obj.x = x; obj.y = y;
+                if(obj.penDown) gameState.penDrawings.push({type: 'line', x1: oldX, y1: oldY, x2: obj.x, y2: obj.y, color: obj.penColor, size: obj.penSize});
+            }
         },
         enableJoystick: function(objId) { 
             gameState.joystickEnabled = true; joystickOverlay.style.display = 'block'; 
@@ -1262,17 +1793,32 @@ document.addEventListener('DOMContentLoaded', () => {
             if (obj.sayTimeout) clearTimeout(obj.sayTimeout);
             obj.sayTimeout = setTimeout(() => { if(gameState.objects[objId]) gameState.objects[objId].sayText = null; }, time * 1000);
         },
-        glide: async function(objId, secs, targetX, targetY) {
-            const obj = gameState.objects[objId];
-            if (!obj) return;
-            const startX = obj.x; const startY = obj.y;
-            const frames = Math.max(1, secs * 60);
-            for (let i = 1; i <= frames; i++) {
-                if (!gameState.isRunning) break;
-                obj.x = startX + (targetX - startX) * (i / frames);
-                obj.y = startY + (targetY - startY) * (i / frames);
-                await new Promise(r => setTimeout(r, 16));
-            }
+        glide: function(id, secs, x, y) {
+            return new Promise(resolve => {
+                const obj = gameState.objects[id];
+                if (!obj) return resolve();
+                const startX = obj.x; const startY = obj.y;
+                const dx = x - startX; const dy = y - startY;
+                const durationMs = secs * 1000;
+                const startTime = Date.now();
+                
+                function step() {
+                    if (!gameState.isRunning) return resolve();
+                    const now = Date.now();
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / durationMs, 1);
+                    const oldX = obj.x, oldY = obj.y;
+                    obj.x = startX + dx * progress;
+                    obj.y = startY + dy * progress;
+                    if(obj.penDown) gameState.penDrawings.push({type: 'line', x1: oldX, y1: oldY, x2: obj.x, y2: obj.y, color: obj.penColor, size: obj.penSize});
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        resolve();
+                    }
+                }
+                step();
+            });
         },
                 setMapSize: function(w, h) { gameState.mapWidth = Math.max(480, w); gameState.mapHeight = Math.max(360, h); },
         cameraFollow: function(targetName) { gameState.cameraTargetName = String(targetName).trim().toLowerCase(); },
@@ -1356,7 +1902,139 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
-        }
+        },
+        playSound: function(src, loop) {
+            const audio = new Audio(src);
+            audio.loop = loop;
+            audio.play().catch(e => console.error("Audio play failed:", e));
+            playingAudios.push(audio);
+        },
+        playCustomSound: function(name, loop) {
+            if (!currentProject.audios) return;
+            const audioData = currentProject.audios.find(a => a.name === name);
+            if (audioData) {
+                GameAPI.playSound(audioData.src, loop);
+            }
+        },
+        // --- Pen API ---
+        penClear: function() { gameState.penDrawings = []; },
+        penDown: function(id) { if(gameState.objects[id]) gameState.objects[id].penDown = true; },
+        penUp: function(id) { if(gameState.objects[id]) gameState.objects[id].penDown = false; },
+        penSetColor: function(id, color) { if(gameState.objects[id]) gameState.objects[id].penColor = color; },
+        penChangeColor: function(id, val) { if(gameState.objects[id]) { /* simplified, would adjust HSL */ } },
+        penSetSize: function(id, size) { if(gameState.objects[id]) gameState.objects[id].penSize = size; },
+        penChangeSize: function(id, size) { if(gameState.objects[id]) gameState.objects[id].penSize += size; },
+        penStamp: function(id) {
+            const obj = gameState.objects[id];
+            if(obj) gameState.penDrawings.push({type: 'stamp', id: obj.sprite.id, x: obj.x, y: obj.y, size: obj.size, direction: obj.direction, costume: obj.sprite.currentCostumeIndex});
+        },
+        // --- Control & Events API ---
+        broadcast: function(msg) {
+            if(gameState.messages[msg]) gameState.messages[msg].forEach(cb => cb());
+        },
+        broadcastAndWait: function(msg) {
+            return new Promise(resolve => {
+                if(gameState.messages[msg]) {
+                    Promise.all(gameState.messages[msg].map(cb => cb())).then(resolve);
+                } else resolve();
+            });
+        },
+        onMessage: function(msg, cb) {
+            if(!gameState.messages[msg]) gameState.messages[msg] = [];
+            gameState.messages[msg].push(cb);
+        },
+        createClone: function(callerId, targetName) {
+            let targetSprite = getSprites().find(s => s.name === targetName || (targetName.toLowerCase() === 'myself' && s.id === gameState.objects[callerId].sprite.id));
+            if(!targetSprite && targetName.toLowerCase() === 'myself') targetSprite = gameState.objects[callerId].sprite;
+            if (targetSprite) {
+                const cloneId = 'clone_' + Date.now() + Math.random();
+                const baseObj = gameState.objects[targetSprite.id];
+                gameState.objects[cloneId] = {
+                    sprite: targetSprite,
+                    x: baseObj ? baseObj.x : 240, y: baseObj ? baseObj.y : 180,
+                    size: baseObj ? baseObj.size : 100, direction: baseObj ? baseObj.direction : 90,
+                    visible: true, life: 100, isBarrier: false,
+                    penDown: false, penColor: '#ff0000', penSize: 2, rotationStyle: 'ALL', layer: 0, effects: {COLOR: 0, GHOST: 0},
+                    isClone: true
+                };
+                if(gameState.cloneCallbacks && gameState.cloneCallbacks[targetSprite.id]) {
+                    gameState.cloneCallbacks[targetSprite.id].forEach(cb => cb(cloneId));
+                }
+            }
+        },
+        deleteClone: function(id) {
+            if (gameState.objects[id] && gameState.objects[id].isClone) {
+                delete gameState.objects[id];
+            }
+        },
+        onCloned: function(id, cb) {
+            const spriteId = gameState.objects[id].sprite.id;
+            if(!gameState.cloneCallbacks) gameState.cloneCallbacks = {};
+            if(!gameState.cloneCallbacks[spriteId]) gameState.cloneCallbacks[spriteId] = [];
+            gameState.cloneCallbacks[spriteId].push((newCloneId) => cb(newCloneId));
+        },
+        // --- Motion API (Advanced) ---
+        setRotationStyle: function(id, style) { if(gameState.objects[id]) gameState.objects[id].rotationStyle = style; },
+        turn: function(id, degrees) { if(gameState.objects[id]) { gameState.objects[id].direction += degrees; } },
+        pointTowards: function(id, targetName) {
+            const obj = gameState.objects[id];
+            if (!obj) return;
+            if (targetName === 'mouse') {
+                const dx = gameState.mouseX - obj.x; const dy = gameState.mouseY - obj.y;
+                obj.direction = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+            } else {
+                const targetId = Object.keys(gameState.objects).find(k => gameState.objects[k].sprite.name === targetName);
+                if(targetId) {
+                    const target = gameState.objects[targetId];
+                    const dx = target.x - obj.x; const dy = target.y - obj.y;
+                    obj.direction = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+                }
+            }
+        },
+        glideToObject: async function(id, secs, targetName) {
+            const obj = gameState.objects[id];
+            if (!obj) return;
+            let targetX = obj.x, targetY = obj.y;
+            if (targetName === 'mouse') { targetX = gameState.mouseX; targetY = gameState.mouseY; }
+            else {
+                const targetId = Object.keys(gameState.objects).find(k => gameState.objects[k].sprite.name === targetName);
+                if(targetId) { targetX = gameState.objects[targetId].x; targetY = gameState.objects[targetId].y; }
+            }
+            await GameAPI.glide(id, secs, targetX, targetY);
+        },
+        changeSpeed: function(id, speed) {
+            if(gameState.objects[id]) {
+                if(gameState.objects[id].speed === undefined) gameState.objects[id].speed = 10;
+                gameState.objects[id].speed += speed;
+            }
+        },
+        // --- Looks API (Advanced) ---
+        nextCostume: function(id) {
+            const obj = gameState.objects[id];
+            if(obj && obj.sprite.costumes) {
+                obj.sprite.currentCostumeIndex = (obj.sprite.currentCostumeIndex + 1) % obj.sprite.costumes.length;
+            }
+        },
+        switchCostume: function(id, val) {
+            const obj = gameState.objects[id];
+            if(obj && obj.sprite.costumes) {
+                if (typeof val === 'number') obj.sprite.currentCostumeIndex = Math.max(0, Math.min(val - 1, obj.sprite.costumes.length - 1));
+                else {
+                    const idx = obj.sprite.costumes.findIndex(c => c.name === val);
+                    if(idx !== -1) obj.sprite.currentCostumeIndex = idx;
+                }
+            }
+        },
+        changeEffect: function(id, effect, val) { if(gameState.objects[id]) gameState.objects[id].effects[effect] += val; },
+        setEffect: function(id, effect, val) { if(gameState.objects[id]) gameState.objects[id].effects[effect] = val; },
+        clearEffects: function(id) { if(gameState.objects[id]) gameState.objects[id].effects = {COLOR: 0, GHOST: 0}; },
+        goToLayer: function(id, layer) { if(gameState.objects[id]) gameState.objects[id].layer = layer === 'FRONT' ? 999 : -999; },
+        // --- Sensing API ---
+        mouseX: function() { return gameState.mouseX || 0; },
+        mouseY: function() { return gameState.mouseY || 0; },
+        mouseDown: function() { return gameState.mouseDown || false; },
+        timer: function() { return (Date.now() - (gameState.startTime || Date.now())) / 1000; },
+        resetTimer: function() { gameState.startTime = Date.now(); }
     };
 
     function initBlockly() {
@@ -1581,32 +2259,60 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillRect(0, 0, gameState.mapWidth, gameState.mapHeight);
         }
 
-        for (const key in gameState.objects) {
-            const obj = gameState.objects[key];
-            if (!obj.visible) continue; // Skip hidden objects
+        // Draw pen lines & stamps
+        if (gameState.penDrawings) {
+            gameState.penDrawings.forEach(d => {
+                if (d.type === 'line') {
+                    ctx.beginPath();
+                    ctx.moveTo(d.x1, d.y1);
+                    ctx.lineTo(d.x2, d.y2);
+                    ctx.strokeStyle = d.color;
+                    ctx.lineWidth = d.size;
+                    ctx.lineCap = 'round';
+                    ctx.stroke();
+                } else if (d.type === 'stamp') {
+                    const img = spriteImages[d.id] && spriteImages[d.id][d.costume];
+                    if (img) {
+                        ctx.save();
+                        ctx.translate(d.x, d.y);
+                        ctx.rotate((d.direction - 90) * Math.PI / 180);
+                        ctx.drawImage(img, -d.size/2, -d.size/2, d.size, d.size);
+                        ctx.restore();
+                    }
+                }
+            });
+        }
+
+        const sortedObjects = Object.values(gameState.objects).sort((a,b) => (a.layer || 0) - (b.layer || 0));
+        sortedObjects.forEach(obj => {
+            if (!obj.visible) return;
             
-            const img = spriteImages[obj.sprite.id];
+            const currentCostumeIdx = obj.sprite.currentCostumeIndex || 0;
+            let img = spriteImages[obj.sprite.id];
+            if (img && img[currentCostumeIdx]) img = img[currentCostumeIdx];
+            else img = null;
             
             ctx.save();
             ctx.translate(obj.x, obj.y);
-            ctx.rotate((obj.direction - 90) * Math.PI / 180); 
-            const scale = obj.size / 100;
-            ctx.scale(scale, scale);
-
-            if (obj.isBarrier) {
-                ctx.strokeStyle = '#ea4335';
-                ctx.lineWidth = 3;
-                ctx.strokeRect(-25, -25, 50, 50);
+            
+            if (obj.effects && obj.effects.GHOST) {
+                ctx.globalAlpha = Math.max(0, 1 - (obj.effects.GHOST / 100));
+            }
+            if (obj.effects && obj.effects.COLOR) {
+                ctx.filter = `hue-rotate(${obj.effects.COLOR}deg)`;
             }
 
-            if (img && img.complete) {
-                ctx.drawImage(img, -25, -25, 50, 50);
-            } else if (img && !img.complete) {
-                ctx.fillStyle = '#ddd';
-                ctx.fillRect(-20, -20, 40, 40);
+            if (obj.rotationStyle === 'LEFT_RIGHT') {
+                if (obj.direction < 0 || obj.direction > 180) ctx.scale(-1, 1);
+            } else if (obj.rotationStyle === 'ALL') {
+                ctx.rotate((obj.direction - 90) * Math.PI / 180);
+            } // NONE does nothing
+
+            if (img) {
+                ctx.drawImage(img, -obj.size/2, -obj.size/2, obj.size, obj.size);
             } else {
-                ctx.fillStyle = '#ff6b6b';
-                ctx.fillRect(-20, -20, 40, 40);
+                ctx.fillStyle = '#000';
+                ctx.fillRect(-obj.size/2, -obj.size/2, obj.size, obj.size);
             }
             
             ctx.restore();
@@ -1637,7 +2343,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.lineWidth = 2;
                 ctx.strokeRect(obj.x - 28 * (obj.size/100), obj.y - 28 * (obj.size/100), 56 * (obj.size/100), 56 * (obj.size/100));
             }
-        }
+        });
         ctx.restore();
     }
 
@@ -1658,7 +2364,13 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.clickCallbacks = {};
         gameState.phaseCallbacks = { '1': [], '2': [], '3': [], '4': [], '5': [], '6': [], '7': [], '8': [], '9': [], '10': [] };
         gameState.touchCallbacks = [];
+        gameState.messages = {};
+        gameState.cloneCallbacks = {};
+        gameState.penDrawings = [];
+        gameState.startTime = Date.now();
         joystickOverlay.style.display = 'none'; jumpBtnOverlay.style.display = 'none';
+        playingAudios.forEach(a => { a.pause(); a.currentTime = 0; });
+        playingAudios = [];
 
         getSprites().forEach(sprite => {
             gameState.objects[sprite.id] = {
@@ -1670,7 +2382,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 visible: true,
                 speed: 5, life: 100, 
                 vy: 0, gravity: 0.8, jumpPower: -12, isGrounded: false,
-                hasJoystick: false, hasJump: false, isBarrier: false
+                hasJoystick: false, hasJump: false, isBarrier: false,
+                penDown: false, penColor: '#ff0000', penSize: 2, rotationStyle: 'ALL', layer: 0, effects: { COLOR: 0, GHOST: 0 }, isClone: false
             };
         });
 
@@ -1743,6 +2456,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Interactive Stage (Dragging in Edit Mode & Clicking in Play Mode) ---
     let isDraggingSprite = false;
     canvas.addEventListener('mousedown', (e) => {
+        gameState.mouseDown = true;
         const pos = getMousePos(canvas, e);
         const spritesRev = [...getSprites()].reverse();
         
@@ -1771,6 +2485,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        gameState.mouseX = (e.clientX - rect.left) * (canvas.width / rect.width);
+        gameState.mouseY = (e.clientY - rect.top) * (canvas.height / rect.height);
+
         if (gameState.isRunning || !isDraggingSprite || !currentSpriteId) return;
         const pos = getMousePos(canvas, e);
         const sprite = getSprites().find(s => s.id === currentSpriteId);
@@ -1780,8 +2498,8 @@ document.addEventListener('DOMContentLoaded', () => {
             stopGame(); // redraws preview
         }
     });
-    canvas.addEventListener('mouseup', () => isDraggingSprite = false);
-    canvas.addEventListener('mouseleave', () => isDraggingSprite = false);
+    canvas.addEventListener('mouseup', () => { isDraggingSprite = false; gameState.mouseDown = false; });
+    canvas.addEventListener('mouseleave', () => { isDraggingSprite = false; gameState.mouseDown = false; });
 
 
     // --- Input & Touch ---
@@ -1924,27 +2642,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function stopGame() {
-        gameState.isRunning = false; if (animationFrameId) cancelAnimationFrame(animationFrameId);
-        playBtn.style.display = 'flex'; stopBtn.style.display = 'none';
-        joystickOverlay.style.display = 'none'; jumpBtnOverlay.style.display = 'none';
-        
-        gameState.objects = {}; // Clear old objects
-        
-        if (currentProject && getSprites()) {
-            getSprites().forEach(sprite => {
-                gameState.objects[sprite.id] = {
-                    sprite: sprite, 
-                    x: sprite.x !== undefined ? sprite.x : 240, 
-                    y: sprite.y !== undefined ? sprite.y : 180, 
-                    size: sprite.size !== undefined ? sprite.size : 100,
-                    direction: sprite.direction !== undefined ? sprite.direction : 90,
-                    visible: true,
-                    life: 100, isBarrier: false
-                };
-            });
+            gameState.isRunning = false; if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            playBtn.style.display = 'flex'; stopBtn.style.display = 'none';
+            joystickOverlay.style.display = 'none'; jumpBtnOverlay.style.display = 'none';
+            
+            gameState.objects = {}; // Clear old objects
+            playingAudios.forEach(a => { a.pause(); a.currentTime = 0; });
+            playingAudios = [];
+            
+            if (currentProject && getSprites()) {
+                getSprites().forEach(sprite => {
+                    gameState.objects[sprite.id] = {
+                        sprite: sprite, 
+                        x: sprite.x !== undefined ? sprite.x : 240, 
+                        y: sprite.y !== undefined ? sprite.y : 180, 
+                        size: sprite.size !== undefined ? sprite.size : 100,
+                        direction: sprite.direction !== undefined ? sprite.direction : 90,
+                        visible: true,
+                        life: 100, isBarrier: false
+                    };
+                });
+            }
+            draw();
         }
-        draw();
-    }
 
     newProjectBtn.addEventListener('click', createNewProject);
     backBtn.addEventListener('click', () => { showView('menu-view'); });

@@ -24,6 +24,9 @@
                 <option value="ja">日本語</option>
             </select>
             <header class="menu-header">
+                <button id="theme-toggle-btn" class="icon-btn" title="Toggle Dark Mode" style="position: absolute; top: 20px; left: 20px; color: var(--text-primary);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
                 <h1 id="app-title"><span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span></h1>
                 <p id="app-subtitle">Your offline block programming environment</p>
             </header>
@@ -60,6 +63,10 @@
                     <button id="draw-btn" class="primary-btn yellow">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.58 7.58"></path></svg>
                         <span id="btn-paint">Paint</span>
+                    </button>
+                    <button id="header-record-btn" class="primary-btn red">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                        <span id="btn-record">Record</span>
                     </button>
                     <button id="save-btn" class="primary-btn blue"><span id="btn-save">Save</span></button>
                 </div>
@@ -122,11 +129,35 @@
                                     <input type="number" id="prop-dir" value="90">
                                 </div>
                             </div>
+                            <div class="prop-row" style="align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 8px;">
+                                <div style="display:flex; align-items:center; gap: 8px;">
+                                    <label>Sprites:</label>
+                                    <select id="prop-costume" style="padding: 4px; border-radius: 4px; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--border-color);"></select>
+                                </div>
+                                <div style="display:flex; gap: 4px;">
+                                    <button id="add-costume-draw-btn" class="icon-btn" title="Draw New Sprite" style="padding: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+                                    </button>
+                                    <label for="upload-costume-input" class="icon-btn" title="Upload Sprite" style="cursor: pointer; margin: 0; display: flex; padding: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                        <input type="file" id="upload-costume-input" accept="image/*" style="display: none;">
+                                    </label>
+                                    <button id="delete-costume-btn" class="icon-btn" title="Delete Sprite" style="padding: 4px; color: #ff5555;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="sprites-header">
-                            <h3 id="sprites-title">Objects</h3>
-                            <div class="sprites-actions">
+                        <div class="tabs-header">
+                            <button id="tab-objects" class="tab-btn active">Objects</button>
+                            <button id="tab-scenarios" class="tab-btn">Scenarios</button>
+                            <button id="tab-audios" class="tab-btn">Audios</button>
+                        </div>
+                        
+                        <!-- Objects Tab Content -->
+                        <div id="content-objects" class="tab-content active">
+                            <div class="sprites-actions" style="justify-content: flex-end; display: flex; margin-bottom: 8px;">
                                 <button id="add-sprite-draw-btn" class="icon-btn" title="Draw New Object">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
                                 </button>
@@ -135,9 +166,33 @@
                                     <input type="file" id="upload-sprite-input" accept="image/*" style="display: none;">
                                 </label>
                             </div>
+                            <div id="sprites-list" class="sprites-list">
+                                <!-- Sprite cards will be generated here -->
+                            </div>
                         </div>
-                        <div id="sprites-list" class="sprites-list">
-                            <!-- Sprite cards will be generated here -->
+
+                        <!-- Scenarios Tab Content -->
+                        <div id="content-scenarios" class="tab-content" style="display: none;">
+                            <div class="sprites-actions" style="justify-content: flex-end; display: flex; margin-bottom: 8px;">
+                                <button id="add-scenario-draw-btn" class="icon-btn" title="Draw New Scenario">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+                                </button>
+                            </div>
+                            <div id="scenarios-list" class="sprites-list"></div>
+                        </div>
+
+                        <!-- Audios Tab Content -->
+                        <div id="content-audios" class="tab-content" style="display: none;">
+                            <div class="sprites-actions" style="justify-content: flex-end; display: flex; margin-bottom: 8px;">
+                                <button id="add-sound-btn" class="icon-btn" title="Record Sound">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                                </button>
+                                <label for="upload-sound-input" class="icon-btn" title="Upload Audio" style="cursor: pointer; margin: 0; display: flex; margin-left: 8px;">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                    <input type="file" id="upload-sound-input" accept="audio/*" style="display: none;">
+                                </label>
+                            </div>
+                            <div id="audios-list" class="sprites-list"></div>
                         </div>
                     </div>
                 </div>
@@ -230,6 +285,36 @@
             <block type="text_print"></block>
         </category>
         <category name="Variables" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>
+        <category name="Audio" colour="330">
+            <block type="audio_play_ready"></block>
+            <block type="audio_play_custom">
+                <value name="AUDIO_NAME">
+                    <shadow type="text">
+                        <field name="TEXT">meu_som</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="audio_loop_ready"></block>
+            <block type="audio_loop_custom">
+                <value name="AUDIO_NAME">
+                    <shadow type="text">
+                        <field name="TEXT">meu_som</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="audio_record">
+                <value name="TIME">
+                    <shadow type="math_number">
+                        <field name="NUM">5</field>
+                    </shadow>
+                </value>
+                <value name="NAME">
+                    <shadow type="text">
+                        <field name="TEXT">novo_audio</field>
+                    </shadow>
+                </value>
+            </block>
+        </category>
     </xml>
 
     <!-- Paint Modal -->
@@ -270,6 +355,30 @@
             </div>
             <div class="modal-actions">
                 <button id="save-paint-btn" class="primary-btn blue">Save Drawing</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Record Audio Modal -->
+    <div id="record-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Record Audio</h2>
+                <button id="close-record-btn" class="icon-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+            </div>
+            <div class="record-body" style="padding: 20px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="start-record-btn" class="primary-btn" style="background: #ef4444;">Start Recording</button>
+                    <button id="stop-record-btn" class="primary-btn" style="background: #6b7280;" disabled>Stop</button>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 100%; gap: 5px;">
+                    <label>Audio Name:</label>
+                    <input type="text" id="record-name" value="my_audio" style="padding: 8px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
+                </div>
+                <audio id="record-preview" controls style="display:none; width: 100%;"></audio>
+            </div>
+            <div class="modal-actions">
+                <button id="save-record-btn" class="primary-btn blue" disabled>Save Audio</button>
             </div>
         </div>
     </div>

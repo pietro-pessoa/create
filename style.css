@@ -185,7 +185,7 @@ button {
     border-radius: var(--radius-sm); border: none; cursor: pointer;
 }
 .add-phase-btn:hover { filter: brightness(1.1); }
-#stage-canvas { width: 100%; height: 320px; background-color: #ffffff; border-bottom: 2px solid var(--border-color); }
+#stage-canvas { width: 100%; height: auto; aspect-ratio: 4/3; background-color: #ffffff; border-bottom: 2px solid var(--border-color); }
 
 /* Sprites Panel */
 .sprites-panel {
@@ -218,13 +218,21 @@ button {
 }
 .prop-group input:focus { border-color: var(--color-blue); outline: none; }
 
-.sprites-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
+.tabs-header {
+    display: flex; gap: 4px; margin-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
 }
-.sprites-header h3 { font-family: 'Nunito', sans-serif; font-size: 1.1rem; color: var(--text-secondary); }
+.tab-btn {
+    background: transparent; border: none; padding: 8px 12px;
+    font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--text-secondary);
+    border-bottom: 3px solid transparent; cursor: pointer; transition: var(--transition);
+}
+.tab-btn:hover { color: var(--text-primary); background: var(--surface-hover); border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+.tab-btn.active { color: var(--color-blue); border-bottom-color: var(--color-blue); }
+
+.tab-content { display: none; flex-direction: column; }
+.tab-content.active { display: flex; }
+
 .sprites-actions { display: flex; gap: 8px; }
 .sprites-list {
     display: flex;
@@ -260,7 +268,15 @@ button {
     align-items: center; justify-content: center;
     font-size: 10px; font-weight: bold;
 }
-.sprite-card:hover .delete-sprite-btn, .sprite-card:hover .duplicate-sprite-btn { display: flex; }
+.sprite-card:hover .delete-sprite-btn, .sprite-card:hover .duplicate-sprite-btn, .sprite-card:hover .add-costume-hover-btn { display: flex; }
+.add-costume-hover-btn {
+    position: absolute; top: 20px; right: -5px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--color-green); color: white;
+    border: none; cursor: pointer; display: none;
+    align-items: center; justify-content: center;
+    font-size: 14px; font-weight: bold;
+}
 
 .stage-tools { padding: 12px; display: flex; gap: 10px; justify-content: center; background: var(--surface-color); }
 
@@ -370,6 +386,7 @@ button {
         max-height: 250px; 
         overflow-y: auto; 
     }
+    .prop-row { flex-wrap: wrap; }
     
     /* Blockly Workspace */
     .workspace { 
@@ -387,3 +404,42 @@ button {
         justify-content: center;
     }
 }
+
+/* --- Dark Mode (Neon) --- */
+body.dark-mode {
+    --bg-color: #0d0d12;
+    --surface-color: #16161e;
+    --surface-hover: #1f1f2e;
+    --text-primary: #ffffff;
+    --text-secondary: #9aa5ce;
+    --border-color: #3b3b54;
+    --shadow-soft: 0 4px 12px rgba(0,0,0,0.5);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.8);
+}
+
+body.dark-mode .primary-btn { box-shadow: 0 0 12px var(--color-blue), 0 4px 0px rgba(0,0,0,0.5); }
+body.dark-mode .primary-btn:hover { box-shadow: 0 0 18px var(--color-blue), 0 6px 0px rgba(0,0,0,0.5); }
+
+body.dark-mode .primary-btn.red { box-shadow: 0 0 12px var(--color-red), 0 4px 0px rgba(0,0,0,0.5); }
+body.dark-mode .primary-btn.red:hover { box-shadow: 0 0 18px var(--color-red), 0 6px 0px rgba(0,0,0,0.5); }
+
+body.dark-mode .primary-btn.green { box-shadow: 0 0 12px var(--color-green), 0 4px 0px rgba(0,0,0,0.5); }
+body.dark-mode .primary-btn.green:hover { box-shadow: 0 0 18px var(--color-green), 0 6px 0px rgba(0,0,0,0.5); }
+
+body.dark-mode .primary-btn.yellow { box-shadow: 0 0 12px var(--color-yellow), 0 4px 0px rgba(0,0,0,0.5); }
+body.dark-mode .primary-btn.yellow:hover { box-shadow: 0 0 18px var(--color-yellow), 0 6px 0px rgba(0,0,0,0.5); }
+
+body.dark-mode .icon-btn { border: 1px solid rgba(255,255,255,0.1); }
+body.dark-mode .icon-btn:hover { box-shadow: 0 0 12px rgba(255,255,255,0.4); background-color: #2f2f42; }
+
+body.dark-mode .project-card:hover { box-shadow: 0 0 20px var(--color-blue); }
+
+body.dark-mode .sprite-card.active { background: rgba(66, 133, 244, 0.2); box-shadow: 0 0 12px var(--color-blue), 0 0 0 2px var(--color-blue); }
+
+body.dark-mode .blocklyToolboxDiv { background-color: var(--surface-color) !important; border-right: 2px solid var(--border-color) !important; }
+body.dark-mode .blocklySvg { background-color: var(--bg-color) !important; }
+
+body.dark-mode .editor-header { border-bottom: 2px solid var(--border-color); box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+body.dark-mode .modal-content { box-shadow: 0 0 25px var(--color-blue); border: 1px solid var(--border-color); }
+body.dark-mode #project-title { color: var(--text-primary); }
+body.dark-mode #project-title:focus { box-shadow: 0 0 8px var(--color-blue); }
